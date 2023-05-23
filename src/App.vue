@@ -1,7 +1,15 @@
 <template>
 	<HelloWorld :user="user" />
-	<input type="text" v-model="user.name" /><br />
-	<input type="text" v-model="user.age" />
+	<input type="text" v-model="user.name" v-on:input="display"/><br />
+	<input type="text" v-model="user.age" /><br />
+	
+  <div v-if="user.age > 17">
+    Je suis majeur
+  </div>
+  <div v-else>
+    Je suis mineur
+  </div>
+   
 </template>
 
 <script setup>
@@ -10,7 +18,7 @@ import { reactive } from "vue";
 
 const user = reactive({
 	name: "GrCOTE7",
-	age: 58,
+	age: 17,
 });
 
 const display = () => {
