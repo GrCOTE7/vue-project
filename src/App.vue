@@ -1,18 +1,20 @@
 <template>
-	<HelloWorld :name="name" :age="age" />
-	<input type="text" v-model='name' /><br>
-	<input type="text" v-model='age' />
+	<HelloWorld :user="user" />
+	<input type="text" v-model='user.name' /><br>
+	<input type="text" v-model='user.age' />
 </template>
 
 <script setup>
 import HelloWorld from "@/components/HelloWorld.vue";
 import { ref } from "vue";
 
-const name = ref('GrCOTE7');
-const age = ref(58);
+const user = ref({
+  name: 'GrCOTE7',
+  age: 58
+});
 
 const display = () => {
-  console.log(name.value, age.value)
+  console.log(user.value)
 }
 
 display()
