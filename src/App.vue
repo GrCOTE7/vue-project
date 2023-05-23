@@ -1,6 +1,6 @@
 <template>
 	<HelloWorld :user="user" />
-	<input type="text" v-model="user.name" v-on:input="display"/><br />
+	<input type="text" v-model="user.name" @input="display"/><br />
 	<input type="text" v-model="user.age" /><br />
 	
   <div v-if="user.age > 17">
