@@ -1,6 +1,6 @@
 <template>
 	<HelloWorld />
-	<div :class="[user.age < 18 ? 'text-red': 'text-green' ]">
+	<div class="bold" :class="[{ red: isMineur, green: !isMineur }]">
 		{{ user.name }}
 	</div>
 </template>
@@ -14,6 +14,8 @@ const user = reactive({
 	age: 17,
 });
 
+const isMineur = user.age < 18;
+
 const display = () => {
 	console.log(user.name, user.age);
 };
@@ -22,10 +24,13 @@ display();
 </script>
 
 <style scoped>
-.text-red {
+.bold {
+	font-weight: bolder;
+}
+.red {
 	color: indianred;
 }
-.text-green {
+.green {
 	color: green;
 }
 </style>
