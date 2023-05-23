@@ -1,15 +1,8 @@
 <template>
-	<HelloWorld :user="user" />
-	<input type="text" v-model="user.name" @change="display"/><br />
-	<input type="text" v-model="user.age" /><br />
-	
-  <div v-if="user.age > 17">
-    Je suis majeur
-  </div>
-  <div v-else>
-    Je suis mineur
-  </div>
-   
+	<HelloWorld />
+	<div :class="[user.age < 18 ? 'text-red': 'text-green' ]">
+		{{ user.name }}
+	</div>
 </template>
 
 <script setup>
@@ -28,4 +21,11 @@ const display = () => {
 display();
 </script>
 
-<style scoped></style>
+<style scoped>
+.text-red {
+	color: indianred;
+}
+.text-green {
+	color: green;
+}
+</style>
