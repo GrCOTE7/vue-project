@@ -1,3 +1,14 @@
+
+VueJS 3 - I:
+https://www.youtube.com/watch?v=DcEkrjdQW-8
+
+Laravel Vue - II:
+https://www.youtube.com/watch?v=TYVGI4kzkbc
+→ See "JobsDemo" project
+
+Laravel Vue - III:
+https://www.youtube.com/watch?v=oDSg0mNTpGA
+
 # vue-project
 
 This template should help get you started developing with Vue 3 in Vite.
